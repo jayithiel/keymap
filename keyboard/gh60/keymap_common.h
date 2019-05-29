@@ -90,26 +90,26 @@ extern const uint16_t fn_actions_3[];
 
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
-    /* 0: workman */
-    KEYMAP(GRV,   1,   2,   3,   4,   5,  F5,HOME,   6,   7,   8,   9,   0, FN8, \
-           TAB,   Q,   D,   R,   W,   B, ESC, EQL,   J,   F,   U,   P,FN13,BSLS, \
-           RGUI,  A,   S,   H,   T,   G, DEL,MINS,   Y,   N,   E,   O,   I,QUOT, \
-           LSFT,  Z,   X,   M,   C,   V, FN6,LCTL,   K,   L,COMM, DOT,SLSH,RSFT, \
-           CAPS,FN9,FN10,LALT, FN0, SPC, ENT, ENT,BSPC, FN2,RALT, FN5,FN11,RCTL), 
+    /* 0: dvorak */
+    KEYMAP(GRV,    1,   2,   3,    4,   5,  F5,HOME,   6,   7,   8,   9,   0,BSPC, \
+           TAB, QUOT,COMM, DOT,    P,   Y,LBRC,RBRC,   F,   G,   C,   R,   L,BSLS, \
+           FN0,    A,   O,   E,    U,   I,SLSH, EQL,   D,   H,   T,   N,   S,MINS, \
+           LSFT,SCLN,   Q,   J,    K,   X, ESC, ESC,   B,   M,   W,   V,   Z,RSFT, \
+           CAPS,LCTL, FN0,LALT, LGUI, SPC, ENT, ENT, SPC,RGUI,RALT, FN5, FN1,RCTL),
 
     /* 1: qwerty */
     KEYMAP(TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-           TRNS,   Q,   W,   E,   R,   T,TRNS,TRNS,   Y,   U,   I,   O,   P,TRNS, \
-           TRNS,   A,   S,   D,   F,   G,TRNS,TRNS,   H,   J,   K,   L,SCLN,TRNS, \
-           LSFT,   Z,   X,   C,   V,   B,TRNS,TRNS,   N,   M,COMM, DOT,SLSH,RSFT, \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
            TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS),
 
     /* 2: navigation */
-    KEYMAP(FN19,  F1,  F2,  F3,  F4,  F5,TRNS,FN25, F6,  F7,  F8,   F9,F10, FN6, \
-           TRNS,CAPS,FN11,FN14,  NO,  NO,TRNS,TRNS,FN16,FN17,FN15,FN18, NO,TRNS, \
-           TRNS,  NO, FN9,  NO,FN10,  NO,TRNS,TRNS,LEFT,DOWN,  UP,RGHT, NO,TRNS, \
-           TRNS,FN23,FN22,FN12, FN8,FN21,TRNS,TRNS,HOME,PGDN,PGUP, END, NO,TRNS, \
-           TRNS,MUTE, F12,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PAUS),
+    KEYMAP(FN19,  F1,  F2,  F3,  F4,  F5,TRNS,FN25,  F6,  F7,  F8,  F9, F10, FN6, \
+           TRNS,CAPS,FN11,FN14,  NO,  NO,TRNS,TRNS,FN16,FN17,  UP,FN18,  NO,TRNS, \
+           TRNS,  NO, FN9,  NO,FN10,  NO,TRNS,TRNS,TRNS,LEFT,DOWN,RGHT,  NO,TRNS, \
+           TRNS,FN23,FN22,FN12, FN8,FN21,TRNS,TRNS,HOME,PGDN,PGUP, END,  NO,TRNS, \
+           TRNS,MUTE,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PAUS),
 
     /* 3: numbers */
     KEYMAP( FN4,  F1,  F2,  F3,  F4,  F5,TRNS,TRNS,  F6,  F7,  F8,  F9, F10, FN6, \
@@ -181,7 +181,7 @@ const uint16_t PROGMEM fn_actions_3[] = {
     [8] = ACTION_MODS_KEY(MOD_LSFT, KC_8),
     [9] = ACTION_MODS_KEY(MOD_LSFT, KC_9),
     [10] = ACTION_MODS_KEY(MOD_LSFT, KC_0),
-    [6] = ACTION_LAYER_TOGGLE(1), 			// qwerty
+    [6] = ACTION_LAYER_TOGGLE(0), 			// qwerty
     [17] = ACTION_MODS_KEY(MOD_LSFT, KC_BSLS),
     [18] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS),
 };
